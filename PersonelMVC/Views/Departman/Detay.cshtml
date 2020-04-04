@@ -1,0 +1,28 @@
+﻿@using PersonelMVC.ViewModels
+@model DepartmanDetayViewModel
+
+@{
+    Layout = null;
+    //var departman = ViewBag.Departman as Departman;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detay</title>
+</head>
+<body>
+    <div> 
+        <h1>Departman Id: @Model.Departman.Id</h1>
+        <h1>Departman Adi: @Model.Departman.Ad</h1>
+    </div>
+    <ul>
+        @foreach (var personal in Model.Personals)
+        {
+            <li>@personal.Ad</li>
+        }
+    </ul>
+</body>
+</html>
